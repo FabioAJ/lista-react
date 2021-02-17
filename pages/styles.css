@@ -1,0 +1,5 @@
+/*Lista de estilos css que é aplicada globalmente pelo arquivo _app.tsx*/
+
+.App {
+    background-color: red;
+  }
