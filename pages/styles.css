@@ -1,5 +1,70 @@
 /*Lista de estilos css que é aplicada globalmente pelo arquivo _app.tsx*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 
-.App {
-    background-color: red;
-  }
+.campo-de-tarefas {
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    border: none;
+    border-bottom: solid 1px grey;
+    padding-bottom: 3px;
+}
+
+.botao-salvar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 27px;
+    border: solid 1px grey;
+    border-radius: 5px;
+    padding: 4px;
+    margin-left: 10px;
+    color:rgb(118, 118, 118);
+    background-color: white;
+}
+
+.botao-salvar:hover {
+    background-color:rgb(202, 202, 202);
+}
+
+.entrada-tarefas {
+    text-align: center;
+}
+
+.tarefas {
+    text-align: center;
+    margin: 0 auto;
+    border: solid 1px grey;
+    width: 400px;
+    margin-top: 10px;
+    padding-top: 5px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+}
+
+.excluir-concluido {
+    margin-top: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.excluir-concluido > button {
+    border: solid 1px grey;
+    margin-right: 5px;
+    font-size: 14px;
+    padding: 5px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+}
+
+.excluir:hover {
+    background-color: rgb(255, 56, 56);
+}
+
+.concluido:hover {
+    background-color: green;
+}
+
+.lista-de-tarefas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

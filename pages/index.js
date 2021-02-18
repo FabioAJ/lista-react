@@ -25,9 +25,9 @@ function Formulario(props) {
     const [text, setText] = useState("");
 
     return (
-        <div>
-            <input onChange={(e) => setText(e.currentTarget.value)} />
-            <button onClick={() => onSave(text)}>Salvar</button>
+        <div className="entrada-tarefas">
+            <input placeholder="Escreva sua tarefa" className="campo-de-tarefas" onChange={(e) => setText(e.currentTarget.value)} />
+            <button className="botao-salvar" onClick={() => onSave(text)}>Salvar</button>
         </div>
     );
 }
@@ -37,13 +37,16 @@ function Lista(props) {
     const { tasks } = props;
 
     return (
-        <div>
+        <div className = "lista-de-tarefas">
             {tasks.map((task) => {
                 return (
-                    <div>
+                    <div className="tarefas">
                         <span>{task}</span>
-                        <button>Excluir</button>
-                        <button>Concluido</button>
+
+                        <div className="excluir-concluido">
+                            <button className="excluir">Excluir</button>
+                            <button className="concluido">Concluido</button>
+                        </div>
                     </div>
                 );
             })}
