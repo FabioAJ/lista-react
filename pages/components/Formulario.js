@@ -13,3 +13,5 @@ export function Formulario(props) {
         </form>
     );
 }
+
+export default Formulario

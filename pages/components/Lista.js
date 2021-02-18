@@ -21,3 +21,5 @@ export function Lista(props) {
         </div>
     );
 }
+
+export default Lista
