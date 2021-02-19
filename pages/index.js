@@ -9,7 +9,12 @@ function App() {
 
     //Adiciona tasks e apresenta na tela com as divs
     const addTask = (task) => {
-        setTask([...tasks, task]);
+        const newTask = {
+            task: task,
+            isComplete: false
+        }
+
+        setTask([...tasks, newTask]);
     };
 
     const deletarTarefa = (index) => {
@@ -18,10 +23,16 @@ function App() {
         setTask(newTasks);
     };
 
+    const toggleComplete = index => {
+        const newTasks = [...tasks];
+        newTasks[index].isComplete = !newTasks[index].isComplete;
+        setTask(newTasks);
+    };
+
     return (
         <div className="App">
             <Formulario onSave={addTask} />
-            <Lista tasks={tasks} deletarTarefa={deletarTarefa}/>
+            <Lista tasks={tasks} deletarTarefa={deletarTarefa} completeTask={toggleComplete}/>
         </div>
     );
 }

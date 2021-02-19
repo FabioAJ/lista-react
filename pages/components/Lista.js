@@ -9,11 +9,11 @@ export function Lista(props) {
             {tasks.map((task, index) => {
                 return (
                     <div className="tarefas" key={index}>
-                        <span>{task}</span>
+                        <span className={task.isComplete ? "complete" : ""}>{task.task}</span>
 
                         <div className="excluir-concluido">
                             <button className="excluir" onClick={() => props.deletarTarefa(index)}>Excluir</button>
-                            <button className="concluido">Concluido</button>
+                            <button className="concluido" onClick={() => props.completeTask(index)}>{task.isComplete ? "Não concluído" : "Concluído"}</button>
                         </div>
                     </div>
                 );
