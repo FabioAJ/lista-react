@@ -6,7 +6,7 @@ export function Lista(props) {
 
     return (
         <div className = "lista-de-tarefas">
-            {tasks.map((task, index) => {
+            {tasks?.map((task, index) => {
                 return (
                     <div className="tarefas" key={index}>
                         <span className={task.isComplete ? "complete" : ""}>{task.task}</span>
